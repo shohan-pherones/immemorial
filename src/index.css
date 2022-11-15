@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-dark: #464646;
+  --color-dark-2: #626262;
+  --color-light: #f5f0ec;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background-color: var(--color-light);
+}
+
+.wrapper {
+  padding: 0 5vw;
+}
+
+section {
+  padding: 10rem 0;
+}
+
+.section-header {
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Syncopate", sans-serif;
+  color: var(--color-dark-2);
+  font-size: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.header-menu {
+  position: absolute;
+  left: 0;
+  top: 10rem;
+  font-family: "Syncopate", sans-serif;
+  color: var(--color-dark-2);
+  text-transform: uppercase;
+}
+
+.header-menu li {
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+#header-text {
+  font-size: 15vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+}
+
+.featured-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.featured-wrapper img {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.featured-wrapper h6 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.featured-row-layout,
+.featured-col-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.featured-row-layout {
+  grid-template-rows: repeat(2, auto);
+}
+
+.featured-row-layout img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.featured-col-layout {
+  grid-template-columns: 12rem auto;
+  align-items: flex-end;
+}
+
+.featured-col-layout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-col-layout h6 {
+  transform: translateX(100%) rotate(-90deg);
+  transform-origin: left bottom;
+  justify-self: self-end;
+}
+
+.about-wrapper p {
+  font-size: 6rem;
+  line-height: 1.25;
 }
