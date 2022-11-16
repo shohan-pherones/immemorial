@@ -19,6 +19,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -141,18 +146,37 @@ section {
 .featured-left {
   display: grid;
   gap: 1rem;
-}
-
-.featured-right {
   position: relative;
 }
 
-.featured-right span {
+.left-shutter {
   position: absolute;
-  left: -1rem;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  transform: rotate(-90deg);
-  transform-origin: left bottom;
+  background-color: var(--color-lighter);
+}
+
+.featured-right {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.right-shutter {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-lighter);
 }
 
 .about p {

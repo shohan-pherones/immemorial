@@ -85,6 +85,51 @@ export const useGsapLeftWalking = (item) => {
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: el,
+          toggleActions: "play",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapFeaturedLeftShutter = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        height: "100%",
+      },
+      {
+        height: 0,
+        duration: 2,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapFeaturedRightShutter = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        width: "100%",
+      },
+      {
+        width: 0,
+        duration: 2,
+        delay: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
           toggleActions: "play reverse play reverse",
         },
       }
