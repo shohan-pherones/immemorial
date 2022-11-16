@@ -1,3 +1,4 @@
+import Featured from "./components/Featured";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -6,6 +7,7 @@ const App = () => {
     <div className="wrapper">
       <Navbar />
       <Hero />
+      <Featured />
     </div>
   );
 };

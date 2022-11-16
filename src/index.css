@@ -41,6 +41,14 @@ section {
   padding: 10vw 0;
 }
 
+.section-title {
+  font-family: "Syncopate", sans-serif;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  padding-bottom: 5vw;
+  color: var(--color-primary);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -87,4 +95,38 @@ section {
   text-align: center;
   line-height: 1.2;
   color: var(--color-darker);
+}
+
+.featured-wrapper {
+  display: grid;
+  grid-template-columns: 30% auto;
+  align-items: center;
+  gap: 10rem;
+}
+
+.featured-wrapper span {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.featured-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.featured-left {
+  display: grid;
+  gap: 1rem;
+}
+
+.featured-right {
+  position: relative;
+}
+
+.featured-right span {
+  position: absolute;
+  left: -1rem;
+  bottom: 0;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
 }
