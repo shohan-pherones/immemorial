@@ -212,6 +212,7 @@ section {
   font-size: 8vw;
   line-height: 1.2;
   mix-blend-mode: color-dodge;
+  z-index: 1;
 }
 
 .gallery-item-category {
@@ -221,6 +222,7 @@ section {
   text-transform: uppercase;
   color: var(--color-lighter);
   letter-spacing: 10px;
+  z-index: 1;
 }
 
 .gallery-item-image {
