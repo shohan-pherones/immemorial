@@ -69,3 +69,25 @@ export const useGsapShutterUnveil = (item, delay = 0, trig) => {
     );
   }, []);
 };
+
+export const useGsapLeftWalking = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "-100vw",
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: el,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
