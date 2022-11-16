@@ -242,4 +242,37 @@ section {
   font-size: 10vw;
   text-transform: lowercase;
   color: var(--color-primary);
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .wrapper {
+    margin: 0 2.5vw;
+  }
+
+  section {
+    padding: 5vw 0;
+  }
+
+  .section-title {
+    padding-bottom: 2.5vw;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+    flex-direction: column;
+  }
+
+  .logo {
+    order: -1;
+  }
+
+  .featured-wrapper {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
 }
