@@ -37,6 +37,10 @@ body {
   padding: 0 5vw;
 }
 
+section {
+  padding: 10vw 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -74,4 +78,13 @@ body {
 .links a:hover::before,
 .favourite-link a:hover::before {
   width: 120%;
+}
+
+.hero {
+  font-family: "Bai Jamjuree", sans-serif;
+  text-transform: uppercase;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--color-darker);
 }
