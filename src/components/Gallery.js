@@ -1,5 +1,5 @@
-import GalleryItem from "./GalleryItem";
 import SectionTitle from "./SectionTitle";
+import GalleryItem from "./GalleryItem";
 
 const images = [
   {

@@ -1,10 +1,10 @@
-import About from "./components/About";
-import Featured from "./components/Featured";
-import Footer from "./components/Footer";
-import Gallery from "./components/Gallery";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
 import { useSmoothScroll } from "./hooks/useSmoothScroll";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Featured from "./components/Featured";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 
 const App = () => {
   useSmoothScroll();

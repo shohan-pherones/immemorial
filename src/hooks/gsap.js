@@ -1,26 +1,71 @@
 import { useEffect } from "react";
-import gsap from "gsap";
+import gsap, { Expo } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const useGsapDownStagger = (arr) => {
+gsap.registerPlugin(ScrollTrigger);
+
+export const useGsapDownStagger = (arr, delay = 0) => {
   useEffect(() => {
     const el = arr.map((item) => item.current);
 
     gsap.fromTo(
       el,
-      { y: "-100%", opacity: 0 },
-      { y: 0, duration: 0.5, opacity: 1, stagger: 0.2, ease: "sine" }
+      {
+        y: "-100%",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        stagger: 0.25,
+        delay: delay,
+        ease: Expo.easeInOut,
+      }
     );
   }, []);
 };
 
-export const useGsapUpward = (item) => {
+export const useGsapUpward = (item, delay = 0) => {
   useEffect(() => {
     const el = item.current;
 
     gsap.fromTo(
       el,
-      { y: "300%", opacity: 0 },
-      { y: 0, duration: 1, opacity: 1, ease: "back", delay: 0.5 }
+      {
+        y: "100%",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        delay: delay,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+export const useGsapShutterUnveil = (item, delay = 0, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        height: "100%",
+      },
+      {
+        height: 0,
+        duration: 2,
+        delay: delay,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play reverse play reverse",
+        },
+      }
     );
   }, []);
 };
