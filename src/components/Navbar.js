@@ -1,9 +1,23 @@
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="menu">Menu</div>
-      <div className="logo">Immemorial</div>
-      <div className="cart">Cart</div>
+      <ul className="links">
+        <li>
+          <a href="#">Featured</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+      </ul>
+      <div className="logo">
+        <h2>Immemorial</h2>
+      </div>
+      <div className="favourite-link">
+        <a href="#">Favourites</a>
+      </div>
     </div>
   );
 };
