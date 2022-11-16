@@ -2,7 +2,7 @@ import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about wrapper">
       <SectionTitle title="About" />
       <p>
         Explore the lost treasures and shining stars of the 1990s! Find your

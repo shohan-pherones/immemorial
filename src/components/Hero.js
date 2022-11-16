@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero wrapper">
       <h1>Ethereal Canvas</h1>
     </section>
   );

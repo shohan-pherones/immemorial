@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar wrapper">
       <ul className="links">
         <li>
           <a href="#">Featured</a>

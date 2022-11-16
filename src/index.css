@@ -34,7 +34,7 @@ body {
 }
 
 .wrapper {
-  padding: 0 5vw;
+  margin: 0 5vw;
 }
 
 section {
@@ -107,7 +107,7 @@ section {
 .featured-wrapper span {
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
 
 .featured-wrapper img {
@@ -139,4 +139,58 @@ section {
 
 .about p:last-child {
   margin-top: 3vw;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10vw;
+  padding: 10vw;
+  background-color: var(--color-primary);
+}
+
+.gallery-item {
+  position: relative;
+  width: 50%;
+}
+
+.gallery-item-title {
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  font-family: "Bai Jamjuree", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+  font-size: 8vw;
+  line-height: 1.2;
+  mix-blend-mode: color-dodge;
+}
+
+.gallery-item-category {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+  letter-spacing: 10px;
+}
+
+.gallery-item-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 10vw;
+  text-transform: lowercase;
+  color: var(--color-primary);
 }
