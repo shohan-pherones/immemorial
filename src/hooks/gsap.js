@@ -235,3 +235,44 @@ export const useGsapFooterHeadline = (item, trig) => {
     );
   }, []);
 };
+
+export const useGsapNotFoundHeadline = (item, vw = "-100vw") => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: vw,
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+export const useGsapNotFoundImg = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        scale: 0,
+        opacity: 0,
+        borderRadius: "50%",
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        borderRadius: 0,
+        duration: 4,
+        delay: 0.75,
+        ease: "elastic",
+      }
+    );
+  }, []);
+};
