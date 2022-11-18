@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { useGsapDownStagger, useGsapUpward } from "../hooks/gsap";
 
 const Navbar = () => {
@@ -19,20 +20,22 @@ const Navbar = () => {
     <div className="navbar wrapper">
       <ul className="links">
         <li ref={li1}>
-          <a href="#">Featured</a>
+          <Link to="featured">Featured</Link>
         </li>
         <li ref={li2}>
-          <a href="#">About</a>
+          <Link to="about">About</Link>
         </li>
         <li ref={li3}>
-          <a href="#">Gallery</a>
+          <Link to="gallery">Gallery</Link>
         </li>
       </ul>
       <div className="logo" ref={logo}>
-        <h2>Immemorial</h2>
+        <Link to="/">
+          <h2>Immemorial</h2>
+        </Link>
       </div>
       <div className="favourite-link" ref={fav}>
-        <a href="#">Favourites</a>
+        <Link to="favourites">Favourites</Link>
       </div>
     </div>
   );

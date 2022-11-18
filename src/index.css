@@ -93,6 +93,10 @@ section {
   width: 120%;
 }
 
+.logo a {
+  color: inherit;
+}
+
 .hero {
   font-family: "Bai Jamjuree", sans-serif;
   text-transform: uppercase;
