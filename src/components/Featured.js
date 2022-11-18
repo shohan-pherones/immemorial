@@ -1,14 +1,14 @@
 import { useRef } from "react";
-import SectionTitle from "./SectionTitle";
 import {
   useGsapFeaturedLeftShutter,
   useGsapFeaturedRightShutter,
 } from "../hooks/gsap";
+import SectionTitle from "./SectionTitle";
 
 const Featured = ({ minHeight = false }) => {
+  const featuredRef = useRef(null);
   const featuredLeftShutter = useRef(null);
   const featuredRightShutter = useRef(null);
-  const featuredRef = useRef(null);
 
   useGsapFeaturedLeftShutter(featuredLeftShutter, featuredRef);
   useGsapFeaturedRightShutter(featuredRightShutter, featuredRef);

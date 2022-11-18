@@ -13,8 +13,8 @@ const Navbar = () => {
   const favArr = [fav];
 
   useGsapDownStagger(liArr, 1.5);
-  useGsapUpward(logo, 2.2);
   useGsapDownStagger(favArr, 2.6);
+  useGsapUpward(logo, 2.2);
 
   return (
     <div className="navbar wrapper">

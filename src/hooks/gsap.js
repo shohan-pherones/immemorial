@@ -230,7 +230,7 @@ export const useGsapFooterHeadline = (item, trig) => {
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play",
         },
       }
     );
@@ -248,7 +248,7 @@ export const useGsapNotFoundHeadline = (item, vw = "-100vw") => {
       },
       {
         x: 0,
-        duration: 1,
+        duration: 1.5,
         ease: Expo.easeInOut,
       }
     );
@@ -263,15 +263,13 @@ export const useGsapNotFoundImg = (item) => {
       el,
       {
         scale: 0,
-        opacity: 0,
         borderRadius: "50%",
       },
       {
         scale: 1,
-        opacity: 1,
         borderRadius: 0,
         duration: 4,
-        delay: 0.75,
+        delay: 1,
         ease: "elastic",
       }
     );

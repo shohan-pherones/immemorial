@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import SectionTitle from "./SectionTitle";
 import { useGsapDownBuffering } from "../hooks/gsap";
+import SectionTitle from "./SectionTitle";
 
 const About = ({ minHeight }) => {
   const buffer1 = useRef(null);

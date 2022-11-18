@@ -6,9 +6,9 @@ import {
 } from "../hooks/gsap";
 
 const Hero = () => {
+  const heroRef = useRef(null);
   const shutter1 = useRef(null);
   const shutter2 = useRef(null);
-  const heroRef = useRef(null);
   const photo1Ref = useRef(null);
   const photo2Ref = useRef(null);
   const photo3Ref = useRef(null);
