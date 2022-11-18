@@ -17,8 +17,8 @@ export const useGsapDownStagger = (arr, delay = 0) => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.5,
-        stagger: 0.25,
+        duration: 1.2,
+        stagger: 0.1,
         delay: delay,
         ease: Expo.easeInOut,
       }
@@ -39,7 +39,7 @@ export const useGsapUpward = (item, delay = 0) => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.5,
+        duration: 1,
         delay: delay,
         ease: Expo.easeInOut,
       }
@@ -103,12 +103,12 @@ export const useGsapFeaturedLeftShutter = (item, trig) => {
       },
       {
         height: 0,
-        duration: 1,
+        duration: 1.5,
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
           start: "top center",
-          end: "bottom center",
+          end: "bottom 30%",
           toggleActions: "play reverse play reverse",
         },
       }
@@ -284,20 +284,16 @@ export const useGsapPhotoScroller = (arr) => {
     gsap.fromTo(
       el,
       {
-        y: "-300vh",
-        opacity: 0,
+        y: "-100vh",
         scale: 0,
-        borderRadius: "50%",
       },
       {
         y: 0,
-        opacity: 1,
         scale: 1,
-        borderRadius: 0,
-        duration: 5,
-        stagger: 0.5,
-        delay: 0.25,
-        ease: "elastic",
+        delay: 2.2,
+        duration: 2,
+        stagger: 0.2,
+        ease: Expo.easeInOut,
       }
     );
   }, []);
@@ -313,7 +309,7 @@ export const useGsapPhotoLevitate = (arr, trig) => {
         y: 0,
       },
       {
-        y: "-50%",
+        y: "-30%",
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,

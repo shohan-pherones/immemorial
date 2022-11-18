@@ -18,7 +18,7 @@ const Hero = () => {
   const photosArr = [photo1Ref, photo2Ref, photo3Ref, photo4Ref, photo5Ref];
 
   useGsapShutterUnveil(shutter1, 0, heroRef);
-  useGsapShutterUnveil(shutter2, 0.25, heroRef);
+  useGsapShutterUnveil(shutter2, 0.3, heroRef);
   useGsapPhotoScroller(photosArr);
   useGsapPhotoLevitate(photosArr, heroRef);
 
