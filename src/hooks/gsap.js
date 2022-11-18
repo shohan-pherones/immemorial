@@ -81,7 +81,7 @@ export const useGsapLeftWalking = (item) => {
       },
       {
         x: 0,
-        duration: 1,
+        duration: 1.5,
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: el,
@@ -103,12 +103,12 @@ export const useGsapFeaturedLeftShutter = (item, trig) => {
       },
       {
         height: 0,
-        duration: 1.5,
+        duration: 1.2,
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
           start: "top center",
-          end: "bottom 30%",
+          end: "bottom center",
           toggleActions: "play reverse play reverse",
         },
       }
@@ -127,7 +127,8 @@ export const useGsapFeaturedRightShutter = (item, trig) => {
       },
       {
         width: 0,
-        duration: 1,
+        duration: 1.2,
+        delay: 0.2,
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
