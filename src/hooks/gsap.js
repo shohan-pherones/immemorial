@@ -321,3 +321,26 @@ export const useGsapPhotoLevitate = (arr, trig) => {
     );
   }, []);
 };
+
+export const useGsapDownBuffering = (arr) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 0,
+      },
+      {
+        y: "-1000%",
+        stagger: 0.1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: el,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
