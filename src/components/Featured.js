@@ -5,7 +5,7 @@ import {
   useGsapFeaturedRightShutter,
 } from "../hooks/gsap";
 
-const Featured = () => {
+const Featured = ({ minHeight = false }) => {
   const featuredLeftShutter = useRef(null);
   const featuredRightShutter = useRef(null);
   const featuredRef = useRef(null);
@@ -14,7 +14,11 @@ const Featured = () => {
   useGsapFeaturedRightShutter(featuredRightShutter, featuredRef);
 
   return (
-    <section className="featured wrapper" ref={featuredRef}>
+    <section
+      className="featured wrapper"
+      ref={featuredRef}
+      style={minHeight ? { minHeight: "100vh" } : null}
+    >
       <SectionTitle title="Featured" />
       <div className="featured-wrapper">
         <div className="featured-left">

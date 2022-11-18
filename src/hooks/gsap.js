@@ -276,3 +276,51 @@ export const useGsapNotFoundImg = (item) => {
     );
   }, []);
 };
+
+export const useGsapPhotoScroller = (arr) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-300vh",
+        opacity: 0,
+        scale: 0,
+        borderRadius: "50%",
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        borderRadius: 0,
+        duration: 5,
+        stagger: 0.5,
+        delay: 0.25,
+        ease: "elastic",
+      }
+    );
+  }, []);
+};
+
+export const useGsapPhotoLevitate = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 0,
+      },
+      {
+        y: "-50%",
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};

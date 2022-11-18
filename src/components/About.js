@@ -1,8 +1,11 @@
 import SectionTitle from "./SectionTitle";
 
-const About = () => {
+const About = ({ minHeight }) => {
   return (
-    <section className="about wrapper">
+    <section
+      className="about wrapper"
+      style={minHeight ? { minHeight: "100vh" } : null}
+    >
       <SectionTitle title="About" />
       <p>
         Explore the lost treasures and shining stars of the 1990s! Find your
